@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+/* Common class styles used across all app */
+.h-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.h-flex.jc {
+    justify-content: center;
+    list-style-type: none;
+}
+.h-flex.ac {
+    align-items: center;
+    list-style-type: none;
+}
+.h-flex.sb {
+    justify-content: space-between;
+    list-style-type: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.v-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.v-flex.ac {
+    align-items: center;
+}
+/**************************************/
+
+/* App styles */
+.app {
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-header {
+    background-color: #222;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+    min-height: 150px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-input {
+    width: 50%;
+    margin: 0 20px;
+    border-radius: 2px;
+    border: none;
+    padding: 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.app-content {
+    position: relative;
+    margin-top: 190px;
+    padding: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.query {
+    font-size: 10px;
+    background: grey;
+    padding: 4px;
+    border-radius: 2px;
+    margin: 0 5px;
+}
+
+.popup-container-enter.image-popup {
+    opacity: 0;
+}
+.popup-container-enter.popup-container-enter-active.image-popup {
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+.popup-container-leave {
+    opacity: 1;
+}
+.popup-container-leave.popup-container-leave-active.image-popup {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.image-popup-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.popup-image {
+    cursor: pointer;
+    -webkit-box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.8);
+    box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.8);
+}
+
+.image-item {
+    cursor: pointer;
+    animation: all 0.3s ease-in-out;
+    margin: 8px;
+}
+
+.image-metadata {
+    font-size: 13px;
+    transition: all 0.3s ease-in-out;
+    margin: 20px;
+    color: #FFF;
+}
+.meme-container{
+    position: relative;
+    display: inline-block;
+}
+.text-box{
+    position: absolute;    
+    height: 100%;
+    text-align: center;    
+    width: 100%;
+}
+.text-box:before {
+   content: '';
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
+}
+.text-box h1{
+    display: inline-block;
+    overflow-wrap: break-word;
+    left: 0;
+    right: 0; 
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0px 2px 0 #000,
+    2px 0px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 2px 5px #000;
+    position: absolute;
+}
+.meme-container img{
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
