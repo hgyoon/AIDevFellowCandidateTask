@@ -1,5 +1,5 @@
 This is a meme generator web application for #AIDevChallenge.<br />
-JavaScript, React, and Flicker API were used.<br />
+JavaScript, React, and Flickr API were used.<br />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
