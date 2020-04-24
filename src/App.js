@@ -14,8 +14,6 @@ export default class App extends React.Component {
 			searchText: "",
 			imageList: [],
 			pageNumber: 1,
-			showPopUp: false,
-			popUpImage: null,
 			queries: queriesFromStorage ? queriesFromStorage : [],
 			template: null,
 			meme: null,
@@ -64,8 +62,9 @@ export default class App extends React.Component {
 			.catch(err => {
 				console.log(err);
 			});
-	}
-
+  }
+  
+  //Stores searches to be displayed on search query
   updateLocalStorage() {
 		localStorage.setItem(constants.STORAGE_KEY, JSON.stringify(this.state.queries));
 	}
@@ -80,7 +79,6 @@ export default class App extends React.Component {
   handleImageClick(idx) {
 		this.setState({ template: this.state.imageList[idx]});
 	}
-
 
   render() {
 		return (
