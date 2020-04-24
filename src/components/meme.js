@@ -24,19 +24,18 @@ export class Meme extends React.Component {
                 {/* Overlays text on the image to make a meme */}
                 <div className="meme-container">
                     <input
-                    placeholder="ADD TOP TEXT"
-                    value={this.state.topText}
-                    onChange={e => {
-                        this.setState({topText: e.target.value})
-                    }}
+                        placeholder="ADD TOP TEXT"
+                        value={this.state.topText}
+                        onChange={e => {
+                            this.setState({topText: e.target.value})
+                        }}
                     />
                     <div className="text-box">
-                    <h1>{this.state.topText}</h1>
+                        <h1>{this.state.topText}</h1>
                     </div>
-
                     <img
-                    src={getImageUrl(farm, server, id, secret)}
-                    alt=""
+                        src={getImageUrl(farm, server, id, secret)}
+                        alt=""
                     />
                 </div>
             </div>

@@ -99,6 +99,7 @@ export default class App extends React.Component {
 								onChange={this.onSearchInputChange}
 							/>
 						</div>
+            {/* Displays Recent Searches */}
 						{this.state.queries.length > 0 &&
 							<div style={{ marginTop: "16px" }}>
 								<h5 style={{ marginBottom: "5px" }}>Your Recent Searches</h5>
