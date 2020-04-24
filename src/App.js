@@ -86,6 +86,7 @@ export default class App extends React.Component {
 		return (
 			<div className="app">
 				<div className="app-header">
+          {/*If an image is not chosen yet displays the search bar*/}
 					{!this.state.template && (
 						<div>
 						<h2 style={{ margin: "1rem 0" }}>MEME GENERATOR 1.0</h2>
@@ -102,19 +103,16 @@ export default class App extends React.Component {
 							<div style={{ marginTop: "16px" }}>
 								<h5 style={{ marginBottom: "5px" }}>Your Recent Searches</h5>
 								<ul className="h-flex jc">
-									{this.state.queries.map((query, idx) =>
-										<li key={idx} className="query">
-											{query}
-										</li>
-									)}
+									{this.state.queries.map((query, idx) => <li key={idx} className="query"> {query}</li>)}
 								</ul>
 							</div>}
 						</div>
 					)}
-					
 				</div>
 				<div className="app-content" ref="appContent">
+          {/*If an image is chosen, load the Meme component*/}
 					{this.state.template && (<Meme imageInput={this.state.template}/>)}
+          {/*If an image is not yet chosen, display the image list for user to pick*/}
 					{!this.state.template && <ImageList images={this.state.imageList} onImageClick={this.handleImageClick} />}
 				</div>
 			</div>

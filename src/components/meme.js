@@ -9,14 +9,11 @@ export class Meme extends React.Component {
         }
     }
 
-    handleButtonClick(){
-        this.setState({topText: ""});
-    }
-
     render(){
         const {farm, server, id, secret } = this.props.imageInput;
         return(
             <div className="app">
+                {/* Using same template for main page for consistency */}
                 <div className="app-header">
                 <div>
 						<h2 style={{ margin: "1rem 0" }}>MEME GENERATOR 1.0</h2>
@@ -24,7 +21,7 @@ export class Meme extends React.Component {
                         <h3 style={{ margin: "1rem 0" }}>REFRESH TO START AGAIN</h3>
                 </div>
                 </div>
-
+                {/* Overlays text on the image to make a meme */}
                 <div className="meme-container">
                     <input
                     placeholder="ADD TOP TEXT"
