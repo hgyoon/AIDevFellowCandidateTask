@@ -1,8 +1,18 @@
+This is a meme generator web application for #AIDevChallenge.<br />
+JavaScript, React, and Flicker API were used.<br />
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+After cloning from the repository url, in the project directory, you can run:
 
-In the project directory, you can run:
+### `npm install`
+
+Installs the dependencies in the local node_modules folder. <br />
+
+### `npm audit fix`
+
+In case of any issues shown after npm install, the command above could be run to automatically fix the issues.
 
 ### `npm start`
 
